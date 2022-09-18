@@ -1,4 +1,4 @@
 # StuffDoer
-## clicker and typer app made with pygame
+### clicker and typer app made with pygame
 
-**this is an .exe made with pyinstaller**
+**zip file is an .exe made with pyinstaller, .py file is raw code**
