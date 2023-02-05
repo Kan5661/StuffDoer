@@ -98,7 +98,7 @@ def on_press_f10():
     if len(click_list) > 0 and int(len(str(clicker_repeat_num))) > 0 and len(str(click_interval)) != 0 \
             and str(clicker_repeat_num).isdigit() and str(click_interval).isdigit():
         click_spam = True
-        clicker_instruction = 'press f11 to stop'
+        clicker_instruction = 'press f12 to stop'
         last_time = time.time()
     else:
         clicker_instruction = 'missing / invalid input!'
@@ -113,7 +113,7 @@ def auto_click():
             break
 
 
-def on_press_f11():
+def on_press_f12():
     global click_spam, clicker_instruction
     click_spam = False
     clicker_instruction = 'press f10 to start or click + button to add more clicks'
@@ -218,7 +218,7 @@ while run:
         typer_surface = pygame.font.SysFont('arial', 14).render('Typer', True, (255, 255, 255))
         clicker_surface = pygame.font.SysFont('arial', 14).render('Clicker', True, (255, 255, 255))
         click_num_surface = pygame.font.SysFont('arial', 12).render('Clicks : ' + str((len(click_list))), True, (0, 0, 0))
-        clicker_instruction_surface = pygame.font.SysFont('arial', 12).render(clicker_instruction, True, (255, 0, 0))
+        clicker_instruction_surface = pygame.font.SysFont('arial', 12).render(clicker_instruction, True, (15,100,210))
         clicker_repeat_time_text = pygame.font.SysFont('arial', 12).render(str(click_interval), True, (0, 0, 0))
         clicker_repeat_time_text1 = pygame.font.SysFont('arial', 12).render('Interval', True, (0, 0, 0))
         clicker_repeat_time_text2 = pygame.font.SysFont('arial', 12).render('time(ms)', True, (0, 0, 0))
@@ -278,7 +278,7 @@ while run:
                     clicker_repeat_num += event.unicode
 
             keyboard.add_hotkey('F10', on_press_f10)
-            keyboard.add_hotkey('F11', on_press_f11)
+            keyboard.add_hotkey('F12', on_press_f12)
 
         if add_click:
             keyboard.add_hotkey('F9', on_press_f9)
