@@ -130,8 +130,8 @@ while run:
         text1_line3_surface = pygame.font.SysFont('arial', 12).render(text1[L2 + L1:L1 + L2 + L3], True, (0, 0, 0))
         text1_surface = pygame.font.SysFont('arial', 12).render(text1[0:L1], True, (0, 0, 0))
         repeat_text = pygame.font.SysFont('arial', 12).render('Repeat   ' + str(repeat_num), True, (0, 0, 0))
-        typer_surface = pygame.font.SysFont('arial', 14).render('Typer', True, (255, 255, 255))
-        clicker_surface = pygame.font.SysFont('arial', 14).render('Clicker', True, (255, 255, 255))
+        typer_surface = pygame.font.SysFont('arial', 14).render('Typer', True, (0, 0, 0))
+        clicker_surface = pygame.font.SysFont('arial', 14).render('Clicker', True, (0, 0, 0))
 
         screen.blit(pygame.image.load('png/background.png'), (0, 0))
         screen.blit(start_stop_box, start_stop_box_rect), screen.blit(clear_box, clear_box_rect)
@@ -140,7 +140,7 @@ while run:
         screen.blit(repeat_text, (8, 150)), screen.blit(interval_box, interval_box_rect)
         screen.blit(text1_surface, (15, 70)), screen.blit(text1_line2_surface, (15, 90))
         screen.blit(text1_line3_surface, (15, 110))
-        screen.blit(repeat_time_text1, (8, 177)), screen.blit(repeat_time_text2, (5, 190))
+        screen.blit(repeat_time_text1, (5, 177)), screen.blit(repeat_time_text2, (2, 190))
         screen.blit(repeat_time_text, (56, 183))
         screen.blit(activate_button, (343, 210))
         screen.blit(typer_surface, (16, 5)), screen.blit(clicker_surface, (83, 5))
@@ -215,10 +215,10 @@ while run:
         # noinspection PyUnboundLocalVariable
         screen.blit(clicker_repeat_box_surface, repeat_box_rect)
 
-        typer_surface = pygame.font.SysFont('arial', 14).render('Typer', True, (255, 255, 255))
-        clicker_surface = pygame.font.SysFont('arial', 14).render('Clicker', True, (255, 255, 255))
+        typer_surface = pygame.font.SysFont('arial', 14).render('Typer', True, (0, 0, 0))
+        clicker_surface = pygame.font.SysFont('arial', 14).render('Clicker', True, (0, 0, 0))
         click_num_surface = pygame.font.SysFont('arial', 12).render('Clicks : ' + str((len(click_list))), True, (0, 0, 0))
-        clicker_instruction_surface = pygame.font.SysFont('arial', 12).render(clicker_instruction, True, (15,100,210))
+        clicker_instruction_surface = pygame.font.SysFont('arial', 12).render(clicker_instruction, True, (255,255,255))
         clicker_repeat_time_text = pygame.font.SysFont('arial', 12).render(str(click_interval), True, (0, 0, 0))
         clicker_repeat_time_text1 = pygame.font.SysFont('arial', 12).render('Interval', True, (0, 0, 0))
         clicker_repeat_time_text2 = pygame.font.SysFont('arial', 12).render('time(ms)', True, (0, 0, 0))
