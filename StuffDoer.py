@@ -98,7 +98,7 @@ def on_press_f10():
     if len(click_list) > 0 and int(len(str(clicker_repeat_num))) > 0 and len(str(click_interval)) != 0 \
             and str(clicker_repeat_num).isdigit() and str(click_interval).isdigit() and not click_spam:
         click_spam = True
-        clicker_instruction = 'press f12 to stop'
+        clicker_instruction = 'press f10 or f12 to stop'
         last_time = time.time()
     elif click_spam:
             click_spam = False
@@ -115,6 +115,11 @@ def auto_click():
         if not click_spam:
             break
 
+
+def on_press_f12():
+    global click_spam, clicker_instruction
+    click_spam = False
+    clicker_instruction = 'press f10 to start or click + button to add more clicks'
 
 
 while run:
@@ -276,6 +281,7 @@ while run:
                     clicker_repeat_num += event.unicode
 
             keyboard.add_hotkey('F10', on_press_f10)
+            keyboard.add_hotkey('F12', on_press_f12)
 
         if add_click:
             keyboard.add_hotkey('F9', on_press_f9)
