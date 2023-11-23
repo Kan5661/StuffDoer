@@ -17,6 +17,10 @@ To use the StuffDoer application, follow these steps:
 2. **Install the requirements**
     ```bash
     pip install -r requirements.txt
+3. **Run StuffDoer.py file**
+    ```bash
+    sudo python StuffDoer.py
+note: you need to run the file with admin privilage for it to access and control keyboard and mouse
 ### Dependencies
 - Pygame
 - PyAutoGUI
