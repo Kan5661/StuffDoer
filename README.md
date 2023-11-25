@@ -22,9 +22,9 @@ To use the StuffDoer application, follow these steps:
 3. **Run StuffDoer.py file**
     ```bash
     sudo python StuffDoer.py
-note: you need to run the file with admin privilage for it to access and control keyboard and mouse
+note: you need to run the file with admin privilage (sudo command) for it to access and control keyboard and mouse
 
-#### If you are a windows user
+#### If you are a windows user:
 The .zip file contains an .exe, you can use it without having python installed on your computer. Simply extract the content, and run the StuffDoer.exe, You will get a warning that the application is from an unknown source, I can't do anything about that; you either click run anyways or don't run it if you don't trust me (as you should). 
 
 ### Dependencies
