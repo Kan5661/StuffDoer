@@ -11,10 +11,20 @@ StuffDoer is an application built using the Pygame module for the graphical user
 ### Functionalities
 
 1. **Text Writing:** Allows users to input text.
-https://github.com/Kan5661/StuffDoer/assets/75275776/3b57780e-9160-4b12-bae0-2542a9bb3ae3
+   
+
+https://github.com/Kan5661/StuffDoer/assets/75275776/37f3ee60-53b5-4d13-9a73-16aa142296f8
+
+
 2. **Clicker:** Provides functionality to automate clicking events.
-https://github.com/Kan5661/StuffDoer/assets/75275776/f6269e8f-5259-4846-9949-980e80d34eb5
-https://github.com/Kan5661/StuffDoer/assets/75275776/718e8463-dba7-47c8-80fc-04a83b9e2458
+
+
+https://github.com/Kan5661/StuffDoer/assets/75275776/45b2ad26-e371-412f-95a7-ebe4d2548ad8
+
+
+https://github.com/Kan5661/StuffDoer/assets/75275776/8e573a42-9802-445a-9c3d-4c71ebaa37a0
+
+
 
 ### Usage
 
