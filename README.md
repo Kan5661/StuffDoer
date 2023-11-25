@@ -13,13 +13,13 @@ StuffDoer is an application built using the Pygame module for the graphical user
 
 To use the StuffDoer application, follow these steps:
 
-1. **Clone the Repository:**
+1. **Clone the repo and cd into it:**
    ```bash
-   git clone https://github.com/Kan5661/StuffDoer.git
-2. **Install the requirements**
+   git clone https://github.com/Kan5661/StuffDoer.git && cd StuffDoer
+2. **Install the requirements:**
     ```bash
     pip install -r requirements.txt
-3. **Run StuffDoer.py file**
+3. **Run StuffDoer.py file:**
     ```bash
     sudo python StuffDoer.py
 note: you need to run the file with admin privilage (sudo command) for it to access and control keyboard and mouse
