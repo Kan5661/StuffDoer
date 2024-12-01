@@ -8,6 +8,7 @@ pygame.init()
 screen = pygame.display.set_mode((400, 250))
 pygame.display.set_icon(pygame.image.load('png/icon.png'))
 pygame.display.set_caption('Stuff Doer')
+pyautogui.PAUSE = 0
 
 # text spammer surfaces/rect
 activate_button = pygame.image.load('png/activate.png')
@@ -98,7 +99,7 @@ def on_press_f10():
     if len(click_list) > 0 and int(len(str(clicker_repeat_num))) > 0 and len(str(click_interval)) != 0 \
             and str(clicker_repeat_num).isdigit() and str(click_interval).isdigit() and not click_spam:
         click_spam = True
-        clicker_instruction = 'press f10 or f12 to stop'
+        clicker_instruction = 'press esc to stop'
         last_time = time.time()
     elif click_spam:
             click_spam = False
@@ -116,7 +117,7 @@ def auto_click():
             break
 
 
-def on_press_f12():
+def on_press_esc():
     global click_spam, clicker_instruction
     click_spam = False
     clicker_instruction = 'press f10 to start or click + button to add more clicks'
@@ -124,7 +125,6 @@ def on_press_f12():
 
 while run:
     while typer_active:
-        pyautogui.PAUSE = 0
         # Draw stuff
         repeat_time_text = pygame.font.SysFont('arial', 12).render(repeat_time, True, (0, 0, 0))
         repeat_time_text1 = pygame.font.SysFont('arial', 12).render('Interval', True, (0, 0, 0))
@@ -205,7 +205,7 @@ while run:
                 if len(str(repeat_num)) == 0 or len(str(text1)) == 0 or (int(repeat_time)) == 0:
                     text_spam = False
                 elif len(text1) != 0 and int(repeat_num) > 0:
-                    pyautogui.write('\n' + text1 + '\n', interval=0)
+                    pyautogui.write('\n' + text1 + '\n \n', interval=0)
                     repeat_num = int(repeat_num) - 1
                 else:
                     text_spam = False
@@ -281,7 +281,7 @@ while run:
                     clicker_repeat_num += event.unicode
 
             keyboard.add_hotkey('F10', on_press_f10)
-            keyboard.add_hotkey('F12', on_press_f12)
+            keyboard.add_hotkey('esc', on_press_esc)
 
         if add_click:
             keyboard.add_hotkey('F9', on_press_f9)
