@@ -45,6 +45,7 @@ note: you need to run the file with admin privilege (sudo command) for it to acc
 ## Windows
 1. **Follow MAC step 1 & 2**
 2. ``python StuffDoer.py``
+
 note: make sure to run your terminal as administrator
 ### Dependencies
 - Pygame
