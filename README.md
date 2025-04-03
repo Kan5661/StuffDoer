@@ -30,6 +30,7 @@ https://github.com/Kan5661/StuffDoer/assets/75275776/8e573a42-9802-445a-9c3d-4c7
 
 To use the StuffDoer application, follow these steps:
 
+## MAC
 1. **Clone the repo and cd into it:**
    ```bash
    git clone https://github.com/Kan5661/StuffDoer.git && cd StuffDoer
@@ -41,9 +42,11 @@ To use the StuffDoer application, follow these steps:
     sudo python StuffDoer.py
 note: you need to run the file with admin privilege (sudo command) for it to access and control the keyboard and mouse
 
-#### If you are a Windows user:
-The .zip file contains an .exe, you can use it without having Python installed on your computer. Simply extract the content, and run the StuffDoer.exe, You will get a warning that the application is from an unknown source, and I can't do anything about that; you either click run anyways or don't run it if you don't trust me (as you should). 
+## Windows
+1. **Follow MAC step 1 & 2**
+2. ``python StuffDoer.py``
 
+note: make sure to run your terminal as administrator
 ### Dependencies
 - Pygame
 - PyAutoGUI
