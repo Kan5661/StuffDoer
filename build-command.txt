@@ -1,0 +1,3 @@
+pip install pyinstaller
+
+pyinstaller --icon ./png/Icon.ico --onefile .\StuffDoer.py --windowed --noconsole --add-data "/*;png"
