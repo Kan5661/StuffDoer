@@ -43,7 +43,7 @@ note: you need to run the file with admin privilege (sudo command) for it to acc
 ### Windows
 1. **Follow MAC step 1 & 2**
 2. ```bash
-   python StuffDoer.py```
+   python StuffDoer.py
 
 note: make sure to run your terminal as administrator
 
@@ -51,19 +51,19 @@ note: make sure to run your terminal as administrator
 this is for if you want to modify the code/image assets and recompile
 1. **Clone the repository:**
     ``` bash
-    git clone https://github.com/Kan5661/StuffDoer.git && cd StuffDoer```
+    git clone https://github.com/Kan5661/StuffDoer.git && cd StuffDoer
 2. **Create a virtual environment:**
    ```bash
-   python3 -m venv venv```
+   python3 -m venv venv
 3. **Install dependencies:**
    ```bash
-   pip install -r requirements.txt``` and 
+   pip install -r requirements.txt and 
    ```bash
-   pip install pyinstaller``` 
+   pip install pyinstaller
 4. **Run build command:**
    ```bash
    pyinstaller --icon ./png/Icon.ico --onefile .\StuffDoer.py --windowed --noconsole --add-data "png;png"
-   ```  
+   
    
 
 ## License
