@@ -1,8 +1,4 @@
-# StuffDoer
-
-This is an auto-clicker and text spammer app.
-
-StuffDoer is an application built using the Pygame module for the graphical user interface (GUI), the PyAutoGUI module for controlling input, and the Keyboard module for listening to keypress events. It offers two primary functionalities: text writing and a clicker.
+# StuffDoer: Auto clicker and texter
 
 
 ## Installation 
