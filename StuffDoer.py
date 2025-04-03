@@ -3,41 +3,54 @@ import time
 import sys
 import pyautogui
 import keyboard
+import sys
+import os
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    if getattr(sys, 'frozen', False):
+        # Running as an executable
+        base_path = sys._MEIPASS
+    else:
+        # Running as a script
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 pygame.init()
 screen = pygame.display.set_mode((400, 250))
-pygame.display.set_icon(pygame.image.load('png/icon.png'))
+pygame.display.set_icon(pygame.image.load(resource_path('png/icon.png')))
 pygame.display.set_caption('Stuff Doer')
 pyautogui.PAUSE = 0
 
 # text spammer surfaces/rect
-activate_button = pygame.image.load('png/activate.png')
-start_stop_box = pygame.image.load('png/start_box.png')
+activate_button = pygame.image.load(resource_path('png/activate.png'))
+start_stop_box = pygame.image.load(resource_path('png/start_box.png'))
 start_stop_box_rect = start_stop_box.get_rect()
 start_stop_box_rect.x, start_stop_box_rect.y = 315, 200
-text1_box = pygame.image.load('png/text1.png')
+text1_box = pygame.image.load(resource_path('png/text1.png'))
 text1_box_rect = text1_box.get_rect()
 text1_box_rect.x, text1_box_rect.y = 8, 45
-repeat_box = pygame.image.load('png/repeat_num.png')
+repeat_box = pygame.image.load(resource_path('png/repeat_num.png'))
 repeat_box_rect = repeat_box.get_rect()
 repeat_box_rect.x, repeat_box_rect.y = 53, 147
-interval_box = pygame.image.load('png/interval_box.png')
+interval_box = pygame.image.load(resource_path('png/interval_box.png'))
 interval_box_rect = interval_box.get_rect()
 interval_box_rect.x, interval_box_rect.y = 53, 180
-clear_box = pygame.image.load('png/clear_box.png')
+clear_box = pygame.image.load(resource_path('png/clear_box.png'))
 clear_box_rect = clear_box.get_rect()
 clear_box_rect.y, clear_box_rect.x = 145, 315
 
 # clicker surfaces/rect
-clear2 = pygame.image.load('png/clear2.png')
+clear2 = pygame.image.load(resource_path('png/clear2.png'))
 clear2_rect, clear2_rect.x, clear2_rect.y = clear2.get_rect(), 315, 145
-add_click_box = pygame.image.load('png/add_click_button.png')
+add_click_box = pygame.image.load(resource_path('png/add_click_button.png'))
 add_click_box_rect = add_click_box.get_rect()
 add_click_box_rect.x, add_click_box_rect.y = 315, 200
-repeating_box = pygame.image.load('png/repeating_true_box.png')
+repeating_box = pygame.image.load(resource_path('png/repeating_true_box.png'))
 repeating_box_rect = repeating_box.get_rect()
 repeating_box_rect.x, repeating_box_rect.y = 315, 37
-clicker_repeating_box_surface = pygame.image.load('png/repeat_num.png')
+clicker_repeating_box_surface = pygame.image.load(resource_path('png/repeat_num.png'))
 
 # initial states
 run, text_spam, text1, text2, text1box, repeat_num, repeatbox, repeat_time, intervalbox, typer_active, clicker_active = True, False, '', '', False, '0', False, '1000', False, True, False
@@ -60,30 +73,30 @@ def event_select():
     # noinspection PyGlobalUndefined
     global on_off, clicker_repeat_num, clicker_repeat_box_surface
     if repeatbox:
-        repeat_box = pygame.image.load('png/repeat_num_true.png')
+        repeat_box = pygame.image.load(resource_path('png/repeat_num_true.png'))
     elif not repeatbox:
-        repeat_box = pygame.image.load('png/repeat_num.png')
+        repeat_box = pygame.image.load(resource_path('png/repeat_num.png'))
     if text_spam:
-        activate_button = pygame.image.load('png/stop.png').convert_alpha()
+        activate_button = pygame.image.load(resource_path('png/stop.png')).convert_alpha()
     elif not text_spam:
-        activate_button = pygame.image.load('png/activate.png').convert_alpha()
+        activate_button = pygame.image.load(resource_path('png/activate.png')).convert_alpha()
     if intervalbox:
-        interval_box = pygame.image.load('png/interval_box_true.png')
+        interval_box = pygame.image.load(resource_path('png/interval_box_true.png'))
     elif not intervalbox:
-        interval_box = pygame.image.load('png/interval_box.png')
+        interval_box = pygame.image.load(resource_path('png/interval_box.png'))
     if text1box:
-        text1_box = pygame.image.load('png/text1_true.png')
+        text1_box = pygame.image.load(resource_path('png/text1_true.png'))
     elif not text1box:
-        text1_box = pygame.image.load('png/text1.png')
+        text1_box = pygame.image.load(resource_path('png/text1.png'))
     if repeating_click:
-        repeating_box = pygame.image.load('png/repeating_true_box.png')
+        repeating_box = pygame.image.load(resource_path('png/repeating_true_box.png'))
         clicker_repeat_num = '999999'
     elif not repeating_click:
-        repeating_box = pygame.image.load('png/repeating_false_box.png')
+        repeating_box = pygame.image.load(resource_path('png/repeating_false_box.png'))
     if clicker_repeat_box:
-        clicker_repeat_box_surface = pygame.image.load('png/repeat_num_true.png')
+        clicker_repeat_box_surface = pygame.image.load(resource_path('png/repeat_num_true.png'))
     else:
-        clicker_repeat_box_surface = pygame.image.load('png/repeat_num.png')
+        clicker_repeat_box_surface = pygame.image.load(resource_path('png/repeat_num.png'))
 
 
 def on_press_f9():
@@ -136,7 +149,7 @@ while run:
         typer_surface = pygame.font.SysFont('arial', 14).render('Typer', True, (0, 0, 0))
         clicker_surface = pygame.font.SysFont('arial', 14).render('Clicker', True, (0, 0, 0))
 
-        screen.blit(pygame.image.load('png/background.png'), (0, 0))
+        screen.blit(pygame.image.load(resource_path('png/background.png')), (0, 0))
         screen.blit(start_stop_box, start_stop_box_rect), screen.blit(clear_box, clear_box_rect)
         screen.blit(text1_box, text1_box_rect)
         screen.blit(repeat_box, repeat_box_rect)
@@ -213,7 +226,7 @@ while run:
         pygame.display.update()
 
     while clicker_active:
-        screen.blit(pygame.image.load('png/background_2.png'), (0, 0))
+        screen.blit(pygame.image.load(resource_path('png/background_2.png')), (0, 0))
         screen.blit(interval_box, interval_box_rect)
         # noinspection PyUnboundLocalVariable
         screen.blit(clicker_repeat_box_surface, repeat_box_rect)
