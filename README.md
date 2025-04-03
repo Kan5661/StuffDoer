@@ -5,10 +5,12 @@ This is an auto-clicker and text spammer app.
 StuffDoer is an application built using the Pygame module for the graphical user interface (GUI), the PyAutoGUI module for controlling input, and the Keyboard module for listening to keypress events. It offers two primary functionalities: text writing and a clicker.
 
 
+## Installation 
+
+download and extract stuffdoer.zip friom [Release]: https://github.com/Kan5661/StuffDoer/releases/tag/windows
 
 
-
-### Functionalities
+## Functionalities
 
 1. **Text Writing:** Allows users to automate input text.
    
@@ -26,11 +28,11 @@ https://github.com/Kan5661/StuffDoer/assets/75275776/8e573a42-9802-445a-9c3d-4c7
 
 
 
-### Usage
+## Usage
 
 To use the StuffDoer application, follow these steps:
 
-## MAC
+### MAC
 1. **Clone the repo and cd into it:**
    ```bash
    git clone https://github.com/Kan5661/StuffDoer.git && cd StuffDoer
@@ -42,15 +44,12 @@ To use the StuffDoer application, follow these steps:
     sudo python StuffDoer.py
 note: you need to run the file with admin privilege (sudo command) for it to access and control the keyboard and mouse
 
-## Windows
+### Windows
 1. **Follow MAC step 1 & 2**
 2. ``python StuffDoer.py``
 
 note: make sure to run your terminal as administrator
-### Dependencies
-- Pygame
-- PyAutoGUI
-- Keyboard
+
 
 ### License
 MIT
