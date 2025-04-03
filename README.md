@@ -7,7 +7,7 @@ StuffDoer is an application built using the Pygame module for the graphical user
 
 ## Installation 
 
-download and extract stuffdoer.zip friom [Release]: https://github.com/Kan5661/StuffDoer/releases/tag/windows
+download and extract stuffdoer.zip from [Release]: https://github.com/Kan5661/StuffDoer/releases/tag/windows
 
 
 ## Functionalities
