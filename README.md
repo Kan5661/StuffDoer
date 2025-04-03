@@ -38,14 +38,15 @@ To use the StuffDoer application, follow these steps:
 3. **Run StuffDoer.py file:**
     ```bash
     sudo python StuffDoer.py
-note: you need to run the file with admin privilege (sudo command) for it to access and control the keyboard and mouse
+note: you may need to run the file with admin privilege (sudo command) for it to access and control the keyboard and mouse
 
 ### Windows
 1. **Follow MAC step 1 & 2**
-2. ```bash
+2. ****Run StuffDoer.py file:****
+   ```bash
    python StuffDoer.py
 
-note: make sure to run your terminal as administrator
+note: You might have to run your terminal as administrator
 
 ## Build from code
 this is for if you want to modify the code/image assets and recompile
