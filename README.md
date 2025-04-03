@@ -58,7 +58,8 @@ this is for if you want to modify the code/image assets and recompile
    python3 -m venv venv
 3. **Install dependencies:**
    ```bash
-   pip install -r requirements.txt and 
+   pip install -r requirements.txt
+    and 
    ```bash
    pip install pyinstaller
 4. **Run build command:**
